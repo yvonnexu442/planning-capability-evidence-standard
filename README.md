@@ -30,7 +30,7 @@ The workflow regenerates the principal replay summaries, transfer results, stres
 
 ## Camera-ready audit records
 
-The complete reference audit, citation cross-check, and SHA-256 manifest are under `release/`. The manuscript files themselves are intentionally not distributed in this public repository. The public reproducibility release is [v1.0-camera-ready](https://github.com/yvonnexu442/planning-capability-evidence-standard/releases/tag/v1.0-camera-ready).
+The complete reference audit, citation cross-check, and SHA-256 manifest are distributed only as assets in the [v1.0-camera-ready reproducibility release](https://github.com/yvonnexu442/planning-capability-evidence-standard/releases/tag/v1.0-camera-ready); they are intentionally excluded from the repository file tree. The manuscript DOCX and PDF are not publicly distributed.
 
 ## Runtime
 
