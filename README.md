@@ -28,9 +28,9 @@ See `docs/reproduction-guide.md` for the staged workflow. Canonical outputs used
 
 The workflow regenerates the principal replay summaries, transfer results, stress and sensitivity summaries, reduced exact-benchmark results, governance diagnostics, proxy-regret summaries, and final figure/table inputs.
 
-## Camera-ready manuscript
+## Camera-ready audit records
 
-The synchronized IEOM Paper 64 camera-ready DOCX and PDF, the complete reference audit, citation cross-check, and SHA-256 manifest are under `release/`. The public release is [v1.0-camera-ready](https://github.com/yvonnexu442/planning-capability-evidence-standard/releases/tag/v1.0-camera-ready).
+The complete reference audit, citation cross-check, and SHA-256 manifest are under `release/`. The manuscript files themselves are intentionally not distributed in this public repository. The public reproducibility release is [v1.0-camera-ready](https://github.com/yvonnexu442/planning-capability-evidence-standard/releases/tag/v1.0-camera-ready).
 
 ## Runtime
 
