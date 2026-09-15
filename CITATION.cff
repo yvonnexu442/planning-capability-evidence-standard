@@ -7,12 +7,14 @@ date-released: 2026-09-14
 authors:
   - family-names: Xu
     given-names: Yihua
-  - family-names: He
-    given-names: Jiani
   - family-names: Lyu
     given-names: Yan
   - family-names: Li
     given-names: Jize
+  - family-names: He
+    given-names: Jiani
+  - family-names: Lin
+    given-names: You
   - family-names: Hu
     given-names: Yidan
   - family-names: Qiang
@@ -23,12 +25,14 @@ preferred-citation:
   authors:
     - family-names: Xu
       given-names: Yihua
-    - family-names: He
-      given-names: Jiani
     - family-names: Lyu
       given-names: Yan
     - family-names: Li
       given-names: Jize
+    - family-names: He
+      given-names: Jiani
+    - family-names: Lin
+      given-names: You
     - family-names: Hu
       given-names: Yidan
     - family-names: Qiang
