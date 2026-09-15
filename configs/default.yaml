@@ -1,0 +1,182 @@
+project:
+  random_seed: 42
+  run_mode: quick
+  output_dir: outputs
+
+data:
+  dataset_name: placeholder_public_demand_dataset
+  raw_data_dir: data/raw
+  processed_data_dir: data/processed
+  quick_mode_max_series: 100
+  medium_mode_max_series: 500
+  full_mode_max_series: 1000
+  min_history_length: 90
+  min_nonzero_observations: 30
+  date_column: date
+  target_column: demand
+  series_id_columns:
+    - item_id
+    - location_id
+
+splits:
+  train_start_date: null
+  train_end_date: null
+  validation_start_date: null
+  validation_end_date: null
+  test_start_date: null
+  test_end_date: null
+
+forecasting:
+  horizon: 28
+  rolling_window_size: 56
+  models_to_run:
+    - naive_last_value
+    - seasonal_naive
+    - moving_average
+    - exponential_smoothing
+    - global_lightgbm
+    - global_xgboost
+    - global_sklearn
+
+favorita_pipeline:
+  raw_data_dir: data/raw/favorita
+  validation_horizon: 28
+  test_horizon: 28
+  minimum_train_dates: 120
+  safety_stock_multiplier: 0.5
+  max_ml_training_rows: 250000
+  stability_switch_penalty: 0.02
+
+m5_pipeline:
+  raw_data_dir: data/raw/m5
+  quick_mode_max_series: 200
+  medium_mode_max_series: 1500
+  full_mode_max_series: null
+  enable_full_mode: false
+  validation_horizon: 28
+  test_horizon: 28
+  min_history_length: 365
+  min_nonzero_observations: 10
+  safety_stock_multiplier: 0.5
+
+walmart_pipeline:
+  raw_data_dir: data/raw/walmart
+  quick_mode_max_series: 200
+  medium_mode_max_series: 750
+  full_mode_max_series: null
+  enable_full_mode: false
+  validation_horizon: 13
+  test_horizon: 13
+  min_history_length: 80
+  min_nonzero_observations: 20
+  safety_stock_multiplier: 0.5
+  max_ml_training_rows: 150000
+  markdown_heavy_percentile: 0.75
+  weekly_cadence:
+    max_switches_per_quarter: 2
+    holiday_freeze_weeks: 1
+    max_weekly_plan_change_rate: 0.20
+
+feasibility_analysis:
+  execution_capacity_scenarios:
+    high_capacity: 0.40
+    medium_capacity: 0.20
+    low_capacity: 0.10
+    severe_constraint: 0.05
+  weight_sensitivity:
+    lambda_volatility_values:
+      - 0.5
+      - 25.0
+      - 100.0
+    lambda_switch_values:
+      - 0.5
+      - 10.0
+    lambda_execution_values:
+      - 0.5
+      - 1.0
+      - 2.0
+      - 5.0
+      - 10.0
+  feasibility_selector:
+    switch_penalty: 0.02
+    minimum_utility_gain: 0.0
+  dp_selector:
+    max_switches: 2
+
+execution_risk_scenario_mapping:
+  base_lambda: 0.05
+  risk_sensitivity: 0.50
+  min_lambda: 0.05
+  max_lambda: 0.60
+  percentile_anchors:
+    dataco_low: 30
+    dataco_median: 50
+    dataco_high: 75
+    dataco_severe: 95
+
+execution_risk_scenarios_fallback:
+  baseline:
+    lambda_execution: 0.10
+  dataco_low:
+    lambda_execution: 0.15
+  dataco_median:
+    lambda_execution: 0.25
+  dataco_high:
+    lambda_execution: 0.35
+  dataco_severe:
+    lambda_execution: 0.45
+
+improved_feasibility_methods:
+  smoothing:
+    fixed_alpha_values:
+      - 0.25
+      - 0.50
+      - 0.75
+    scenario_based_alpha:
+      baseline: 0.75
+      dataco_low: 0.50
+      dataco_median: 0.50
+      dataco_high: 0.25
+      dataco_severe: 0.10
+    utility_based_alpha_grid:
+      - 0.10
+      - 0.25
+      - 0.50
+      - 0.75
+      - 1.00
+    utility_validation_folds: 3
+  ensemble:
+    minimum_weight: 0.0
+    inverse_loss_epsilon: 0.000001
+    constrained_candidate_blends:
+      - 0.00
+      - 0.25
+      - 0.50
+      - 0.75
+      - 1.00
+
+planning:
+  safety_stock_method: constant
+  service_level_target: 0.95
+  holding_cost_rate: 1.0
+  shortage_cost_rate: 5.0
+
+stability:
+  jump_threshold: 0.25
+  max_plan_change_rate: 0.20
+  max_model_switches_per_window: 2
+  switch_window_size: 28
+  execution_latency: 1
+  frozen_planning_window: 7
+
+planning_loss_weights:
+  alpha_forecast: 0.0
+  beta_inventory: 1.0
+  lambda_volatility: 0.10
+  lambda_execution: 0.10
+  lambda_switch: 0.05
+
+experiments:
+  save_plots: true
+  save_tables: true
+  save_config_snapshot: true

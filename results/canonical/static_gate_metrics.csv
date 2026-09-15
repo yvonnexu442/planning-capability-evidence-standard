@@ -1,0 +1,3 @@
+dataset,status,frozen_threshold,material_regret_threshold,false_simplification_rate,false_escalation_rate,precision,recall,negative_predictive_value,simplified_units,simplified_regret_p90,simplified_regret_max
+M5,not_estimable_without_leakage,,1% of best dynamic cost and >1e-6,,,,,,0,,
+Walmart,not_estimable_without_leakage,,1% of best dynamic cost and >1e-6,,,,,,0,,

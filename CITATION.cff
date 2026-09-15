@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated paper."
+title: "Planning Capability Evidence Standard"
+type: software
+version: 1.0.0
+date-released: 2026-09-14
+authors:
+  - family-names: Xu
+    given-names: Yihua
+  - family-names: He
+    given-names: Jiani
+  - family-names: Lyu
+    given-names: Yan
+  - family-names: Li
+    given-names: Jize
+  - family-names: Hu
+    given-names: Yidan
+  - family-names: Qiang
+    given-names: Rubing
+preferred-citation:
+  type: conference-paper
+  title: "When Does an Added Planning Capability Create Operational Value? An Observable Evidence Standard"
+  authors:
+    - family-names: Xu
+      given-names: Yihua
+    - family-names: He
+      given-names: Jiani
+    - family-names: Lyu
+      given-names: Yan
+    - family-names: Li
+      given-names: Jize
+    - family-names: Hu
+      given-names: Yidan
+    - family-names: Qiang
+      given-names: Rubing
+  year: 2026
+  conference:
+    name: "3rd World Congress on Industrial Engineering and Operations Management"

@@ -1,0 +1,13 @@
+dataset,transfer_regime,rate_limit,weights,best_model,test_tuned
+M5,strict_frozen,0.4,"{""exponential_smoothing"": 0.25, ""moving_average"": 0.25, ""naive_last_value"": 0.25, ""seasonal_naive"": 0.25}",exponential_smoothing,False
+M5,family_frozen_parameter_recalibrated,0.75,"{""exponential_smoothing"": 0.25, ""moving_average"": 0.25, ""naive_last_value"": 0.25, ""seasonal_naive"": 0.25}",exponential_smoothing,False
+M5,fully_in_domain_tuned,0.75,"{""exponential_smoothing"": 0.26715313803402607, ""moving_average"": 0.25054342351678727, ""naive_last_value"": 0.24901845085264857, ""seasonal_naive"": 0.23328498759653815}",exponential_smoothing,False
+M5,strict_frozen,0.4,"{""exponential_smoothing"": 0.25, ""moving_average"": 0.25, ""naive_last_value"": 0.25, ""seasonal_naive"": 0.25}",seasonal_naive,False
+M5,family_frozen_parameter_recalibrated,0.75,"{""exponential_smoothing"": 0.25, ""moving_average"": 0.25, ""naive_last_value"": 0.25, ""seasonal_naive"": 0.25}",seasonal_naive,False
+M5,fully_in_domain_tuned,0.75,"{""exponential_smoothing"": 0.24023841639849802, ""moving_average"": 0.23711436423154095, ""naive_last_value"": 0.25759716646484254, ""seasonal_naive"": 0.26505005290511857}",seasonal_naive,False
+M5,strict_frozen,0.4,"{""exponential_smoothing"": 0.25, ""moving_average"": 0.25, ""naive_last_value"": 0.25, ""seasonal_naive"": 0.25}",seasonal_naive,False
+M5,family_frozen_parameter_recalibrated,0.75,"{""exponential_smoothing"": 0.25, ""moving_average"": 0.25, ""naive_last_value"": 0.25, ""seasonal_naive"": 0.25}",seasonal_naive,False
+M5,fully_in_domain_tuned,0.75,"{""exponential_smoothing"": 0.23519914396123567, ""moving_average"": 0.23612910178107568, ""naive_last_value"": 0.24922921633435696, ""seasonal_naive"": 0.2794425379233316}",seasonal_naive,False
+Walmart,strict_frozen,0.4,"{""exponential_smoothing"": 0.16666666666666666, ""global_sklearn"": 0.16666666666666666, ""moving_average_13"": 0.16666666666666666, ""moving_average_4"": 0.16666666666666666, ""naive_last_value"": 0.16666666666666666, ""seasonal_4_week"": 0.16666666666666666}",global_sklearn,False
+Walmart,family_frozen_parameter_recalibrated,0.75,"{""exponential_smoothing"": 0.16666666666666666, ""global_sklearn"": 0.16666666666666666, ""moving_average_13"": 0.16666666666666666, ""moving_average_4"": 0.16666666666666666, ""naive_last_value"": 0.16666666666666666, ""seasonal_4_week"": 0.16666666666666666}",global_sklearn,False
+Walmart,fully_in_domain_tuned,0.75,"{""exponential_smoothing"": 0.16990946101972593, ""global_sklearn"": 0.1891234910358697, ""moving_average_13"": 0.1538149305364415, ""moving_average_4"": 0.17584612038947361, ""naive_last_value"": 0.14676483948138472, ""seasonal_4_week"": 0.16454115753710438}",global_sklearn,False

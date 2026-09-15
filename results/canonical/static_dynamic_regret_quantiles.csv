@@ -1,0 +1,4 @@
+dataset,units,p50_raw_regret,p90_raw_regret,maximum_raw_regret,aggregation
+M5,100,0.0,14.079070266964635,870.0914059703579,within_dataset
+Walmart,100,0.0,41568.86583661051,566444.8094939678,within_dataset
+Pooled,200,0.0,1270.8490725537927,566444.8094939678,descriptive_raw_pool
